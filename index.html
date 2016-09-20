@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-controller="LunchCheckController">
+        <div class="message">
+            ** Empty space between commas IS NOT considered as an item.
+        </div>
+        <span>Enter dishes:</span>
+        <br>
+        <textarea class="textbox" contenteditable="true"
+                  ng-model="items"></textarea>
+        <br>
+        <button ng-click="check()">Check If Too Much</button>
+        <span class="result">{{result}}</span>
+
+    </div>
+</body>
+</html>
